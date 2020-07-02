@@ -1,0 +1,94 @@
+<script src="script.js"></script>
+<script>
+	/********toggle navigation menu in small screen*****/
+	function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") === -1) {
+        x.className += " w3-show";
+  	}
+  	else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+    } //end
+	
+	/*************slider*************/
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2500); // Change image every 2 seconds
+}//end
+	
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+</script>
+<footer class="container shadow">
+		<div class="footer">
+			<div class="row">
+				<div class="col-4">
+					<h3>Phone Support <i class="fa fa-phone"></i></h3>
+					<div class="phone-support">
+						<p class="w3-large"><a href="tel+ 07051262246" class="tel link">07051262246</a><br>
+							<a href="tel+ 08167699022" class="tel link">08167699022</a>
+						</p>
+					</div>
+					<h3>Email Support</h3>
+					<div class="email-support">
+						<p class="email"><img src="image/gmail.png" class="img-fluid rounded" width="20px" height="20px" alt="gmail"> <span class="link">minifinacegus@gmail.com</span></p>
+					</div>
+				</div>
+				<div class="col-4">
+				<h3>Navigate through</h3>
+					<div class="footer-nav">
+						<ul class="list-unstyled">
+							<li><a href="resource.html" class="link">Resource</a></li>
+							<li><a href="mission.html" class="link">Mission</a></li>
+							<li><a href="vission.html" class="link">Vission</a></li>
+							<li><a href="mandate.html" class="link">Mandate</a></li>
+							<li><a href="services.html" class="link">Services</a></li>
+							<li><a href="department.html" class="link">Department</a></li>
+							<li><a href="news.html" class="link">News</a></li>
+							<li><a href="about.html" class="link">About</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-4">
+					<h3>Connect with Us</h3>
+					<ul class="list-unstyled">
+						<li class=" py-1"><a href="https://www.facebook.com/Mahmudcyber-Solution" class="link"><img src="image/facebook.png"class="img-fluid rounded" width="20px" height="20px" alt="facebook" > Facebook</a></li>
+						<li class=""><a href="https://www.twitter.com/mahmudcyberSolution" class="link"><img src="image/twitter%20(1).png"class="img-fluid rounded" width="20px" height="20px" alt="twitter"> Twitter</a></li>
+						<li class=" py-1"><a href="https://www.youtube.com/mahmucybersolution" class="link"><img src="image/instagram%20(2).png"class="img-fluid rounded" width="20px" height="20px" alt="youtube"> Instagram</a></li>
+					</ul>				
+				</div>
+			</div>
+			
+			<div class="developer">
+				<hr>
+				<p class="text-center mb-0">Powered by Ministry of Finance, Zamfara State of Nigeria. Copyright &copy; 2020 - All right reseved.</p>
+			</div>
+		</div>
+	</footer>
+
+</html>
